@@ -1,0 +1,921 @@
+@import url(../Roboto-Regular/fonts.css);
+@import url(../Roboto-Light/fonts.css);
+@import url(../FontIcons/css/fontello.css);
+html {
+  min-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #feffff;
+  font-family: 'Conv_Roboto-Regular';
+  font-weight: 100; }
+  html .non-scroll {
+    overflow: hidden; }
+  html body {
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; }
+    html body #root {
+      min-height: 100vh; }
+      html body #root .App {
+        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden; }
+        html body #root .App .contacts {
+          width: 0;
+          height: 0;
+          position: fixed;
+          right: 0%;
+          bottom: 0%;
+          background: rgba(0, 0, 0, 0.4);
+          z-index: 100;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: .25s; }
+          html body #root .App .contacts .cnt-content {
+            cursor: default;
+            transition: .25s;
+            width: 80%;
+            height: 80%;
+            opacity: 0;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 0 40px 7px rgba(238, 243, 250, 0.2); }
+            html body #root .App .contacts .cnt-content .info {
+              box-sizing: border-box;
+              padding: 15px 20px;
+              flex: 45%;
+              max-width: 48%;
+              align-self: flex-start; }
+              html body #root .App .contacts .cnt-content .info .contact ul {
+                padding: 0;
+                list-style: none; }
+                html body #root .App .contacts .cnt-content .info .contact ul li {
+                  font-family: Conv_Roboto-Light;
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-start;
+                  margin-bottom: 15px; }
+                  html body #root .App .contacts .cnt-content .info .contact ul li i {
+                    font-size: 1.5em;
+                    margin-right: 10px;
+                    transition: .25s; }
+                    html body #root .App .contacts .cnt-content .info .contact ul li i:before {
+                      margin: 0; }
+                  html body #root .App .contacts .cnt-content .info .contact ul li a {
+                    text-decoration: none;
+                    color: white;
+                    position: relative; }
+                    html body #root .App .contacts .cnt-content .info .contact ul li a:before {
+                      position: absolute;
+                      content: '';
+                      width: 0%;
+                      transition: .25s;
+                      height: 1px;
+                      background: #90929e;
+                      bottom: -2px;
+                      left: 0; }
+                  html body #root .App .contacts .cnt-content .info .contact ul li:hover i {
+                    color: red; }
+                  html body #root .App .contacts .cnt-content .info .contact ul li:hover a:before {
+                    width: 100%; }
+              html body #root .App .contacts .cnt-content .info .socials ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                list-style: none;
+                padding: 0;
+                margin: 0; }
+                html body #root .App .contacts .cnt-content .info .socials ul li {
+                  margin-right: 15px;
+                  font-size: 1.5em;
+                  cursor: pointer; }
+                  html body #root .App .contacts .cnt-content .info .socials ul li i {
+                    font-size: 1.1em;
+                    position: relative;
+                    transition: .25s; }
+                    html body #root .App .contacts .cnt-content .info .socials ul li i:before {
+                      position: relative;
+                      margin: 0;
+                      z-index: 10; }
+                    html body #root .App .contacts .cnt-content .info .socials ul li i:after {
+                      z-index: 1;
+                      position: absolute;
+                      content: '';
+                      width: 0px;
+                      transition: .25s;
+                      height: 0px;
+                      background: white;
+                      border-radius: 50%;
+                      top: 50%;
+                      left: 50%; }
+                  html body #root .App .contacts .cnt-content .info .socials ul li:hover i {
+                    color: #6b7293; }
+                    html body #root .App .contacts .cnt-content .info .socials ul li:hover i:after {
+                      width: 35px;
+                      height: 35px;
+                      left: calc(50% - 17px);
+                      top: calc(50% - 17px); }
+                  html body #root .App .contacts .cnt-content .info .socials ul li:last-child {
+                    margin-right: 0; }
+            html body #root .App .contacts .cnt-content .form {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              box-sizing: border-box;
+              padding: 15px 20px;
+              flex: 45%;
+              max-width: 48%;
+              align-self: flex-end; }
+              html body #root .App .contacts .cnt-content .form h2 {
+                width: 75%;
+                font-family: Conv_Roboto-Light; }
+              html body #root .App .contacts .cnt-content .form input {
+                border: 1px solid white;
+                border-radius: 6px;
+                padding: 10px 15px;
+                margin-bottom: 25px;
+                width: 50%;
+                transition: .25s;
+                background: rgba(0, 0, 0, 0.3);
+                color: white; }
+                html body #root .App .contacts .cnt-content .form input:active, html body #root .App .contacts .cnt-content .form input:hover, html body #root .App .contacts .cnt-content .form input:focus {
+                  color: black;
+                  outline: 0;
+                  outline-offset: 0;
+                  background: rgba(255, 255, 255, 0.6); }
+              html body #root .App .contacts .cnt-content .form textarea {
+                width: 50%;
+                min-height: 100px;
+                padding: 10px 15px;
+                color: white;
+                transition: .25s;
+                background: rgba(0, 0, 0, 0.3);
+                border: 1px solid white;
+                border-radius: 6px; }
+                html body #root .App .contacts .cnt-content .form textarea:active, html body #root .App .contacts .cnt-content .form textarea:hover, html body #root .App .contacts .cnt-content .form textarea:focus {
+                  color: black;
+                  outline: 0;
+                  outline-offset: 0;
+                  background: rgba(255, 255, 255, 0.6); }
+              html body #root .App .contacts .cnt-content .form .btn-send {
+                margin-top: 15px;
+                padding: 10px 15px;
+                border: 1px solid white;
+                background: #000;
+                color: white;
+                cursor: pointer;
+                transition: .25s;
+                border-radius: 6px; }
+                html body #root .App .contacts .cnt-content .form .btn-send:hover {
+                  background: white;
+                  color: black; }
+        @media (max-width: 481px) {
+          html body #root .App .contacts {
+            box-sizing: border-box; }
+            html body #root .App .contacts .cnt-content {
+              box-sizing: border-box;
+              flex-direction: column;
+              padding: 10px 15px; }
+              html body #root .App .contacts .cnt-content .info {
+                align-self: auto;
+                max-width: 100%;
+                flex: auto;
+                padding: 0; }
+              html body #root .App .contacts .cnt-content .form {
+                align-self: auto;
+                max-width: 100%;
+                flex: auto;
+                padding: 0;
+                margin-top: 10px; }
+                html body #root .App .contacts .cnt-content .form h2 {
+                  font-size: 1.4em;
+                  margin: 0;
+                  margin-bottom: 10px;
+                  text-align: center;
+                  width: 100%; }
+                html body #root .App .contacts .cnt-content .form input {
+                  box-sizing: border-box;
+                  margin-bottom: 10px;
+                  width: 100%; }
+                html body #root .App .contacts .cnt-content .form textarea {
+                  width: 100%;
+                  box-sizing: border-box;
+                  border-radius: 6px;
+                  height: 100px; }
+                html body #root .App .contacts .cnt-content .form .btn-send {
+                  align-self: center; } }
+        @media (max-height: 600px) {
+          html body #root .App .contacts .cnt-content .info .contact ul {
+            margin: 0; }
+            html body #root .App .contacts .cnt-content .info .contact ul li {
+              margin-bottom: 10px; }
+              html body #root .App .contacts .cnt-content .info .contact ul li i {
+                font-size: 1.3em; }
+              html body #root .App .contacts .cnt-content .info .contact ul li a {
+                font-size: .8em; }
+              html body #root .App .contacts .cnt-content .info .contact ul li:last-child {
+                margin-bottom: 0; }
+          html body #root .App .contacts .cnt-content .form {
+            align-self: auto;
+            max-width: 100%;
+            flex: auto;
+            padding: 0;
+            margin-top: 10px; }
+            html body #root .App .contacts .cnt-content .form h2 {
+              font-size: .9em;
+              margin: 0;
+              margin-bottom: 10px;
+              text-align: center;
+              width: 100%; }
+            html body #root .App .contacts .cnt-content .form input {
+              box-sizing: border-box;
+              margin-bottom: 5px;
+              width: 100%; }
+            html body #root .App .contacts .cnt-content .form textarea {
+              width: 100%;
+              box-sizing: border-box;
+              border-radius: 6px;
+              height: 70px; }
+            html body #root .App .contacts .cnt-content .form .btn-send {
+              align-self: center;
+              padding: 5px 10px; } }
+        html body #root .App .header {
+          position: absolute;
+          z-index: 10;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: white;
+          padding: 5px 100px 35px 100px;
+          box-sizing: border-box; }
+          html body #root .App .header .logo {
+            border: 2px solid white;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-radius: 15px;
+            padding: 2px 10px 5px;
+            font-size: 2em;
+            font-weight: 100;
+            font-family: 'Conv_Roboto-Light'; }
+            html body #root .App .header .logo .logo-letter {
+              font-family: 'Conv_Roboto-Regular';
+              font-weight: 900;
+              margin-right: 5px;
+              font-size: 2em;
+              color: red; }
+          html body #root .App .header .menu {
+            align-self: flex-end; }
+            html body #root .App .header .menu ul {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0;
+              margin: 0;
+              list-style: none; }
+              html body #root .App .header .menu ul li {
+                font-size: 1.4em;
+                margin-right: 15px;
+                cursor: pointer; }
+                html body #root .App .header .menu ul li i {
+                  font-size: 1.1em;
+                  position: relative;
+                  transition: .25s; }
+                  html body #root .App .header .menu ul li i:before {
+                    position: relative;
+                    margin: 0;
+                    z-index: 10; }
+                  html body #root .App .header .menu ul li i:after {
+                    z-index: 1;
+                    position: absolute;
+                    content: '';
+                    width: 0px;
+                    transition: .25s;
+                    height: 0px;
+                    background: white;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%; }
+                html body #root .App .header .menu ul li:last-child {
+                  margin-right: 0;
+                  border: 2px solid white;
+                  border-radius: 10px;
+                  padding: 7px 15px;
+                  transition: .25s;
+                  font-family: 'Conv_Roboto-Light'; }
+                  html body #root .App .header .menu ul li:last-child:hover {
+                    background: white;
+                    border-color: #6b7293;
+                    color: #6b7293;
+                    font-weight: 100; }
+                html body #root .App .header .menu ul li:hover i {
+                  color: #6b7293; }
+                  html body #root .App .header .menu ul li:hover i:after {
+                    width: 35px;
+                    height: 35px;
+                    left: calc(50% - 17px);
+                    top: calc(50% - 17px); }
+        @media (max-width: 481px) {
+          html body #root .App .header {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; }
+            html body #root .App .header .logo {
+              align-self: center;
+              margin-bottom: 15px; }
+            html body #root .App .header .menu {
+              align-self: center; }
+              html body #root .App .header .menu ul {
+                flex-wrap: wrap; }
+                html body #root .App .header .menu ul li:last-child {
+                  margin-top: 10px;
+                  text-align: center;
+                  flex: 100%; } }
+        html body #root .App .intro {
+          height: 100vh;
+          position: relative; }
+          html body #root .App .intro .bg-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: no-repeat center center;
+            background-size: cover; }
+            html body #root .App .intro .bg-layer:after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              background: rgba(0, 0, 0, 0.65); }
+          html body #root .App .intro .content {
+            padding: 0px 100px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            background: #2d323d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+            flex-direction: column;
+            overflow: hidden; }
+            html body #root .App .intro .content .title {
+              position: relative;
+              z-index: 2;
+              margin-bottom: -100px; }
+              html body #root .App .intro .content .title p {
+                text-align: center;
+                font-size: 1.3em;
+                margin-bottom: 5px;
+                margin-top: 0;
+                padding-top: 0;
+                font-family: Conv_Roboto-Light; }
+              html body #root .App .intro .content .title h1 {
+                font-size: 3.5em;
+                margin-top: 5px;
+                font-weight: 100;
+                position: relative; }
+                html body #root .App .intro .content .title h1:after {
+                  content: '';
+                  position: absolute;
+                  bottom: -15px;
+                  left: 25%;
+                  height: 3px;
+                  width: 50%;
+                  border-radius: 10px;
+                  background: rgba(255, 255, 255, 0.7); }
+                html body #root .App .intro .content .title h1:before {
+                  content: '';
+                  position: absolute;
+                  bottom: -30px;
+                  left: calc(25% + (25% / 2));
+                  height: 3px;
+                  width: 25%;
+                  border-radius: 10px;
+                  background: rgba(255, 255, 255, 0.5); }
+            html body #root .App .intro .content .text {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              position: relative;
+              z-index: 3; }
+              html body #root .App .intro .content .text p {
+                width: 30%; }
+              html body #root .App .intro .content .text .btn-call {
+                position: relative;
+                z-index: 3;
+                cursor: pointer;
+                text-transform: capitalize;
+                background: white;
+                color: #5a6287;
+                font-size: 1.3em;
+                padding: 20px 40px;
+                border-radius: 35px;
+                transition: .25s; }
+                html body #root .App .intro .content .text .btn-call:hover {
+                  transform: scale(1.03); }
+            html body #root .App .intro .content .white-layer {
+              position: absolute;
+              width: 100vh;
+              height: 100vh;
+              z-index: 2;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.1);
+              bottom: -25%;
+              right: -5%; }
+          html body #root .App .intro .btn-menu {
+            box-shadow: 0 0 40px 10px rgba(90, 98, 135, 0.2);
+            z-index: 20;
+            color: #5a6287;
+            position: fixed;
+            left: 100px;
+            bottom: 0;
+            width: 250px;
+            background: #feffff;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            border: 1px solid #5a6287;
+            border-bottom-color: transparent;
+            height: 55px;
+            transition: .25s;
+            overflow: hidden; }
+            html body #root .App .intro .btn-menu .position-one {
+              box-sizing: border-box;
+              width: 100%;
+              transition: .25s;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 1.4em;
+              cursor: pointer; }
+              html body #root .App .intro .btn-menu .position-one span {
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box; }
+              html body #root .App .intro .btn-menu .position-one i {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-top-right-radius: 15px;
+                transition: .25s;
+                width: calc(25% + 30px);
+                height: 100%;
+                background: #eef3fa; }
+                html body #root .App .intro .btn-menu .position-one i:before {
+                  margin: 0;
+                  transform: rotate(180deg);
+                  transition: .25s; }
+            html body #root .App .intro .btn-menu .btn-container ul {
+              margin: 0;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              box-sizing: border-box;
+              padding: 10px;
+              font-size: 1.2em; }
+              html body #root .App .intro .btn-menu .btn-container ul li {
+                transition: .25s;
+                color: #5e6387;
+                list-style: none;
+                cursor: pointer;
+                margin-bottom: 15px; }
+                html body #root .App .intro .btn-menu .btn-container ul li i {
+                  color: white;
+                  transform: rotate(20deg);
+                  transition: .25s; }
+                html body #root .App .intro .btn-menu .btn-container ul li:last-child {
+                  margin-bottom: 0; }
+                html body #root .App .intro .btn-menu .btn-container ul li:nth-child(odd):hover {
+                  transform: rotate(10deg); }
+                html body #root .App .intro .btn-menu .btn-container ul li:nth-child(even):hover {
+                  transform: rotate(-5deg); }
+                html body #root .App .intro .btn-menu .btn-container ul li:hover {
+                  color: #3884fe; }
+                  html body #root .App .intro .btn-menu .btn-container ul li:hover i {
+                    color: #3884fe; }
+          html body #root .App .intro .btn-open {
+            height: 300px !important; }
+            html body #root .App .intro .btn-open .position-one {
+              border-bottom: 1px solid #eef3fa;
+              height: 75px; }
+              html body #root .App .intro .btn-open .position-one i:before {
+                transform: rotate(0deg); }
+        @media (max-width: 481px) {
+          html body #root .App .intro .content {
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 20px;
+            padding-bottom: 100px; }
+            html body #root .App .intro .content .title {
+              text-align: center;
+              margin-bottom: 20px; }
+              html body #root .App .intro .content .title p {
+                font-size: 1.1em;
+                margin-bottom: 15px; }
+              html body #root .App .intro .content .title h1 {
+                font-size: 2.5em; }
+            html body #root .App .intro .content .text {
+              flex-direction: column;
+              margin-bottom: 0; }
+              html body #root .App .intro .content .text p {
+                text-align: center;
+                width: 100%;
+                margin-bottom: 25px; }
+            html body #root .App .intro .content .white-layer {
+              width: 70vh;
+              height: 70vh;
+              bottom: -20vh;
+              right: -25vh; }
+          html body #root .App .intro .btn-menu {
+            left: calc(50% - (250px / 2));
+            bottom: 0; } }
+        @media (max-height: 641px) {
+          html body #root .App .intro .content {
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 20px;
+            padding-bottom: 60px; }
+            html body #root .App .intro .content .title {
+              text-align: center;
+              margin-bottom: 0px; }
+              html body #root .App .intro .content .title p {
+                font-size: 1em;
+                margin-bottom: 15px;
+                display: none; }
+              html body #root .App .intro .content .title h1 {
+                font-size: 1.8em; }
+                html body #root .App .intro .content .title h1:before {
+                  display: none; }
+            html body #root .App .intro .content .text {
+              flex-direction: column;
+              margin-bottom: 0; }
+              html body #root .App .intro .content .text p {
+                text-align: center;
+                width: 100%;
+                font-size: 14px;
+                margin-bottom: 15px; }
+            html body #root .App .intro .content .white-layer {
+              width: 70vh;
+              height: 70vh;
+              bottom: -20vh;
+              right: -25vh; } }
+        html body #root .App .about .content {
+          box-sizing: border-box;
+          padding: 50px 100px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center; }
+          html body #root .App .about .content .left-space {
+            width: 35%;
+            display: flex;
+            display: none;
+            align-items: center;
+            justify-content: center; }
+            html body #root .App .about .content .left-space img {
+              width: 90%; }
+          html body #root .App .about .content .right-space {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 50px;
+            max-width: 100%; }
+            html body #root .App .about .content .right-space h3 {
+              color: #0071fd;
+              position: relative;
+              padding-left: 115px; }
+              html body #root .App .about .content .right-space h3:before {
+                content: '';
+                position: absolute;
+                width: 100px;
+                height: 1px;
+                background: #0071fd;
+                left: 0;
+                top: 50%; }
+            html body #root .App .about .content .right-space h2 {
+              text-align: center;
+              font-family: 'Conv_Roboto-Light';
+              font-size: 2em; }
+            html body #root .App .about .content .right-space p {
+              text-align: center;
+              color: #6a7193;
+              line-height: 27px;
+              letter-spacing: -0.2px; }
+            html body #root .App .about .content .right-space ul {
+              list-style: none;
+              padding: 0;
+              text-align: center;
+              font-family: Conv_Roboto-Regular;
+              font-weight: bold; }
+        @media (max-width: 481px) {
+          html body #root .App .about .content {
+            padding: 25px 20px;
+            flex-direction: column; }
+            html body #root .App .about .content .left-space {
+              width: 100%; }
+            html body #root .App .about .content .right-space {
+              width: 100%;
+              max-width: 100%;
+              padding: 0 15px; } }
+        html body #root .App .big-content {
+          margin: 50px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box; }
+          html body #root .App .big-content .left-side {
+            box-sizing: border-box;
+            min-height: 500px;
+            flex: 50%;
+            background: no-repeat center center;
+            background-size: cover; }
+            html body #root .App .big-content .left-side img {
+              height: 100%;
+              width: 100%; }
+          html body #root .App .big-content .right-side {
+            box-sizing: border-box;
+            flex: 50%;
+            padding: 0 100px; }
+            html body #root .App .big-content .right-side h2 {
+              font-size: 2em;
+              font-family: Conv_Roboto-Light; }
+            html body #root .App .big-content .right-side .more-list {
+              color: #6a7193;
+              line-height: 23px;
+              letter-spacing: -0.2px;
+              font-size: 14px; }
+            html body #root .App .big-content .right-side p {
+              color: #6a7193;
+              line-height: 23px;
+              letter-spacing: -0.2px;
+              font-size: 14px; }
+            html body #root .App .big-content .right-side .btn-consulting {
+              margin-top: 25px;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              color: #0071fd;
+              cursor: pointer; }
+              html body #root .App .big-content .right-side .btn-consulting i {
+                transition: .25s;
+                position: relative;
+                margin-left: 20px; }
+                html body #root .App .big-content .right-side .btn-consulting i:before {
+                  margin: 0;
+                  padding: 0; }
+              html body #root .App .big-content .right-side .btn-consulting:hover i {
+                animation-name: array;
+                animation-duration: .4s; }
+        html body #root .App .content-normal {
+          flex-direction: row; }
+        html body #root .App .content-reverse {
+          flex-direction: row-reverse; }
+
+@keyframes array {
+  0% {
+    left: 0px; }
+  25% { }
+  50% {
+    left: 25px;
+    transform: scale(1.5); }
+  75% { }
+  100% {
+    left: 0px; } }
+        @media (max-width: 481px) {
+          html body #root .App .big-content {
+            margin: 25px 0;
+            padding: 30px 0;
+            position: relative; }
+            html body #root .App .big-content .left-side {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0px;
+              min-height: auto;
+              z-index: 0; }
+              html body #root .App .big-content .left-side:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.55); }
+            html body #root .App .big-content .right-side {
+              position: relative;
+              z-index: 2;
+              padding: 0 20% 0 20px; }
+              html body #root .App .big-content .right-side h2 {
+                color: white;
+                text-shadow: 0 0 10px 1px black; }
+              html body #root .App .big-content .right-side .more-list {
+                color: #cbcbcb; }
+              html body #root .App .big-content .right-side p {
+                color: #cbcbcb; }
+              html body #root .App .big-content .right-side .btn-consulting {
+                color: white; }
+          html body #root .App .content-reverse .left-side {
+            left: auto;
+            right: 0; }
+          html body #root .App .content-reverse .right-side {
+            text-align: right;
+            padding: 0 20px 0 20%; }
+            html body #root .App .content-reverse .right-side .btn-consulting {
+              flex-direction: row-reverse; }
+              html body #root .App .content-reverse .right-side .btn-consulting i {
+                margin-left: 0;
+                margin-right: 20px;
+                transform: rotate(180deg); } }
+        html body #root .App .footer {
+          background: #151933;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          position: relative;
+          z-index: 30;
+          color: white;
+          padding: 50px 0;
+          overflow: hidden; }
+          html body #root .App .footer .logo {
+            border: 2px solid white;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-radius: 15px;
+            padding: 2px 10px 2px;
+            font-size: 2em;
+            font-weight: 100;
+            font-family: 'Conv_Roboto-Light'; }
+            html body #root .App .footer .logo .logo-letter {
+              font-family: 'Conv_Roboto-Regular';
+              font-weight: 900;
+              margin-right: 5px;
+              font-size: 2em;
+              color: red; }
+          html body #root .App .footer .menu {
+            margin: 25px 0;
+            position: relative;
+            z-index: 3; }
+            html body #root .App .footer .menu ul {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              list-style: none;
+              padding: 0;
+              margin: 0; }
+              html body #root .App .footer .menu ul li {
+                margin-right: 15px;
+                font-size: 1.2em;
+                position: relative;
+                cursor: pointer; }
+                html body #root .App .footer .menu ul li:last-child {
+                  margin-right: 0; }
+                html body #root .App .footer .menu ul li:before {
+                  position: absolute;
+                  content: '';
+                  width: 0%;
+                  transition: .25s;
+                  height: 1px;
+                  background: #90929e;
+                  bottom: -2px;
+                  left: 0; }
+                html body #root .App .footer .menu ul li:hover:before {
+                  width: 100%; }
+          html body #root .App .footer .copyright {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            position: relative; }
+            html body #root .App .footer .copyright .copyR {
+              font-family: Conv_Roboto-Light;
+              position: relative;
+              width: 100%;
+              text-align: center; }
+              html body #root .App .footer .copyright .copyR:before, html body #root .App .footer .copyright .copyR:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                top: calc(50% - (1px / 2));
+                background: #90929e; }
+              html body #root .App .footer .copyright .copyR:after {
+                left: -60%; }
+              html body #root .App .footer .copyright .copyR:before {
+                right: -60%; }
+            html body #root .App .footer .copyright .to-top {
+              position: absolute;
+              transform: rotate(-90deg);
+              right: 25%;
+              top: calc(50% - (35px / 2));
+              background: #3585fd;
+              border-radius: 50%;
+              width: 35px;
+              height: 35px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: .45s; }
+              html body #root .App .footer .copyright .to-top i:before {
+                transition: .45s; }
+              html body #root .App .footer .copyright .to-top:hover {
+                transform: scale(1.4); }
+                html body #root .App .footer .copyright .to-top:hover i:before {
+                  transform: rotate(270deg); }
+          html body #root .App .footer .more-text {
+            margin: 25px 0;
+            width: 40%;
+            color: #90929e;
+            text-align: center; }
+          html body #root .App .footer .socials ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0; }
+            html body #root .App .footer .socials ul li {
+              margin-right: 15px;
+              font-size: 1.4em;
+              cursor: pointer; }
+              html body #root .App .footer .socials ul li i {
+                font-size: 1.1em;
+                position: relative;
+                transition: .25s; }
+                html body #root .App .footer .socials ul li i:before {
+                  position: relative;
+                  margin: 0;
+                  z-index: 10; }
+                html body #root .App .footer .socials ul li i:after {
+                  z-index: 1;
+                  position: absolute;
+                  content: '';
+                  width: 0px;
+                  transition: .25s;
+                  height: 0px;
+                  background: white;
+                  border-radius: 50%;
+                  top: 50%;
+                  left: 50%; }
+              html body #root .App .footer .socials ul li:hover i {
+                color: #6b7293; }
+                html body #root .App .footer .socials ul li:hover i:after {
+                  width: 35px;
+                  height: 35px;
+                  left: calc(50% - 17px);
+                  top: calc(50% - 17px); }
+              html body #root .App .footer .socials ul li:last-child {
+                margin-right: 0; }
+          html body #root .App .footer .white-space {
+            position: absolute;
+            bottom: -55vh;
+            left: -45vh;
+            width: 100vh;
+            height: 100vh;
+            border-radius: 50%;
+            background: rgba(254, 255, 255, 0.06); }
+        @media (max-width: 481px) {
+          html body #root .App .footer {
+            padding: 25px 0; }
+            html body #root .App .footer .menu {
+              font-size: .8em;
+              margin: 50px 0; }
+              html body #root .App .footer .menu ul {
+                flex-wrap: wrap; }
+                html body #root .App .footer .menu ul li {
+                  font-size: 1em;
+                  margin-bottom: 15px; }
+                  html body #root .App .footer .menu ul li:last-child {
+                    margin-bottom: 15px; }
+            html body #root .App .footer .copyright .copyR:after {
+              left: -73%; }
+            html body #root .App .footer .copyright .copyR:before {
+              right: -73%; }
+            html body #root .App .footer .copyright .to-top {
+              right: 10%; }
+            html body #root .App .footer .more-text {
+              width: 75%; } }

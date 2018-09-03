@@ -1,0 +1,113 @@
+.big-content {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; }
+  .big-content .left-side {
+    box-sizing: border-box;
+    min-height: 500px;
+    flex: 50%;
+    background: no-repeat center center;
+    background-size: cover; }
+    .big-content .left-side img {
+      height: 100%;
+      width: 100%; }
+  .big-content .right-side {
+    box-sizing: border-box;
+    flex: 50%;
+    padding: 0 100px; }
+    .big-content .right-side h2 {
+      font-size: 2em;
+      font-family: Conv_Roboto-Light; }
+    .big-content .right-side .more-list {
+      color: #6a7193;
+      line-height: 23px;
+      letter-spacing: -0.2px;
+      font-size: 14px; }
+    .big-content .right-side p {
+      color: #6a7193;
+      line-height: 23px;
+      letter-spacing: -0.2px;
+      font-size: 14px; }
+    .big-content .right-side .btn-consulting {
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #0071fd;
+      cursor: pointer; }
+      .big-content .right-side .btn-consulting i {
+        transition: .25s;
+        position: relative;
+        margin-left: 20px; }
+        .big-content .right-side .btn-consulting i:before {
+          margin: 0;
+          padding: 0; }
+      .big-content .right-side .btn-consulting:hover i {
+        animation-name: array;
+        animation-duration: .4s; }
+
+.content-normal {
+  flex-direction: row; }
+
+.content-reverse {
+  flex-direction: row-reverse; }
+
+@keyframes array {
+  0% {
+    left: 0px; }
+  25% { }
+  50% {
+    left: 25px;
+    transform: scale(1.5); }
+  75% { }
+  100% {
+    left: 0px; } }
+
+@media (max-width: 481px) {
+  .big-content {
+    margin: 25px 0;
+    padding: 30px 0;
+    position: relative; }
+    .big-content .left-side {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0px;
+      min-height: auto;
+      z-index: 0; }
+      .big-content .left-side:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.55); }
+    .big-content .right-side {
+      position: relative;
+      z-index: 2;
+      padding: 0 20% 0 20px; }
+      .big-content .right-side h2 {
+        color: white;
+        text-shadow: 0 0 10px 1px black; }
+      .big-content .right-side .more-list {
+        color: #cbcbcb; }
+      .big-content .right-side p {
+        color: #cbcbcb; }
+      .big-content .right-side .btn-consulting {
+        color: white; }
+  .content-reverse .left-side {
+    left: auto;
+    right: 0; }
+  .content-reverse .right-side {
+    text-align: right;
+    padding: 0 20px 0 20%; }
+    .content-reverse .right-side .btn-consulting {
+      flex-direction: row-reverse; }
+      .content-reverse .right-side .btn-consulting i {
+        margin-left: 0;
+        margin-right: 20px;
+        transform: rotate(180deg); } }

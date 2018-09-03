@@ -1,0 +1,186 @@
+@media  (max-width:481px) {
+  .contacts{
+    box-sizing: border-box;
+    .cnt-content{
+      box-sizing: border-box;
+      flex-direction: column;
+      padding: 10px 15px;
+      .info{
+        align-self: auto;
+        max-width: 100%;
+        flex: auto;
+        padding: 0;
+
+        .contact{
+          ul{
+            li{
+              i{
+                &:before{}
+              }
+              a{
+                &:before{}
+              }
+
+
+              &:hover{
+                i{}
+                a{
+                  &:before{}
+                }
+              }
+            }
+          }
+        }
+        .socials{
+          ul{
+            li{
+              i{
+                &:before{}
+                &:after{}
+              }
+
+              &:hover{
+                i{
+                  &:after{}
+                }
+              }
+              &:last-child{
+              }
+            }
+          }
+        }
+      }
+      .form{
+        align-self: auto;
+        max-width: 100%;
+        flex: auto;
+        padding: 0;
+        margin-top: 10px;
+        h2{
+          font-size: 1.4em;
+          margin: 0;
+          margin-bottom: 10px;
+          text-align: center;
+          width: 100%;
+        }
+        input{
+          box-sizing: border-box;
+          margin-bottom: 10px;
+          width: 100%;
+          &:active, &:hover, &:focus {
+
+          }
+        }
+        textarea{
+          width: 100%;
+          box-sizing: border-box;
+          border-radius: 6px;
+          height: 100px;
+          &:active, &:hover, &:focus {
+          }
+        }
+        .btn-send{
+          align-self: center;
+          &:hover{
+          }
+        }
+      }
+    }
+  }
+}
+
+@media  (max-height:600px) {
+  .contacts {
+    .cnt-content {
+      .info {
+        .contact {
+          ul {
+            margin: 0;
+            li {
+              margin-bottom: 10px;
+              i {
+                font-size: 1.3em;
+                &:before {
+                }
+              }
+              a {
+                font-size: .8em;
+                &:before {
+                }
+              }
+
+              &:hover {
+                i {
+                }
+                a {
+                  &:before {
+                  }
+                }
+              }
+              &:last-child{
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+        .socials {
+          ul {
+            li {
+              i {
+                &:before {
+                }
+                &:after {
+                }
+              }
+
+              &:hover {
+                i {
+                  &:after {
+                  }
+                }
+              }
+              &:last-child {
+              }
+            }
+          }
+        }
+      }
+      .form{
+        align-self: auto;
+        max-width: 100%;
+        flex: auto;
+        padding: 0;
+        margin-top: 10px;
+        h2{
+          font-size: .9em;
+          margin: 0;
+          margin-bottom: 10px;
+          text-align: center;
+          width: 100%;
+        }
+        input{
+          box-sizing: border-box;
+          margin-bottom: 5px;
+          width: 100%;
+          &:active, &:hover, &:focus {
+
+          }
+        }
+        textarea{
+          width: 100%;
+          box-sizing: border-box;
+          border-radius: 6px;
+          height: 70px;
+          &:active, &:hover, &:focus {
+          }
+        }
+        .btn-send{
+          align-self: center;
+          padding: 5px 10px;
+          &:hover{
+          }
+        }
+      }
+    }
+  }
+}

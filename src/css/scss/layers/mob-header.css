@@ -1,0 +1,16 @@
+@media (max-width: 481px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .header .logo {
+      align-self: center;
+      margin-bottom: 15px; }
+    .header .menu {
+      align-self: center; }
+      .header .menu ul {
+        flex-wrap: wrap; }
+        .header .menu ul li:last-child {
+          margin-top: 10px;
+          text-align: center;
+          flex: 100%; } }

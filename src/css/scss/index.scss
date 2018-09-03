@@ -1,0 +1,49 @@
+@import "../Roboto-Regular/fonts.css";
+@import "../Roboto-Light/fonts.css";
+@import "../FontIcons/css/fontello.css";
+
+html{
+  min-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #feffff;
+  font-family: 'Conv_Roboto-Regular';
+  //Conv_Roboto-Light
+  font-weight: 100;
+  .non-scroll{
+    //scroll: none;
+    overflow: hidden;
+
+  }
+  body{
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    #root{
+
+      //background: blue;
+      min-height: 100vh;
+
+      .App{
+          min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
+
+        @import "layers/contacts.scss";
+
+        @import "layers/header.scss";
+        @import "intro/index.scss";
+        @import "content/about.scss";
+        @import "content/allContent.scss";
+        @import "layers/footer.scss";
+      }
+    }
+  }
+}

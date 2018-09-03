@@ -1,0 +1,45 @@
+@media  (max-width:481px) {
+  .header{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .logo{
+      align-self: center;
+      .logo-letter{
+      }
+      margin-bottom: 15px;
+    }
+    .menu{
+      align-self: center;
+      ul{
+        flex-wrap: wrap;
+        li{
+          //flex: 39%;
+          i{
+
+            &:before{
+            }
+            &:after{
+            }
+          }
+          &:last-child{
+            margin-top: 10px;
+            text-align: center;
+            flex: 100%;
+            &:hover{
+            }
+          }
+
+
+          &:hover{
+
+            i{
+              &:after{
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

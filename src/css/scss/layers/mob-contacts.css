@@ -1,0 +1,71 @@
+@media (max-width: 481px) {
+  .contacts {
+    box-sizing: border-box; }
+    .contacts .cnt-content {
+      box-sizing: border-box;
+      flex-direction: column;
+      padding: 10px 15px; }
+      .contacts .cnt-content .info {
+        align-self: auto;
+        max-width: 100%;
+        flex: auto;
+        padding: 0; }
+      .contacts .cnt-content .form {
+        align-self: auto;
+        max-width: 100%;
+        flex: auto;
+        padding: 0;
+        margin-top: 10px; }
+        .contacts .cnt-content .form h2 {
+          font-size: 1.4em;
+          margin: 0;
+          margin-bottom: 10px;
+          text-align: center;
+          width: 100%; }
+        .contacts .cnt-content .form input {
+          box-sizing: border-box;
+          margin-bottom: 10px;
+          width: 100%; }
+        .contacts .cnt-content .form textarea {
+          width: 100%;
+          box-sizing: border-box;
+          border-radius: 6px;
+          height: 100px; }
+        .contacts .cnt-content .form .btn-send {
+          align-self: center; } }
+
+@media (max-height: 600px) {
+  .contacts .cnt-content .info .contact ul {
+    margin: 0; }
+    .contacts .cnt-content .info .contact ul li {
+      margin-bottom: 10px; }
+      .contacts .cnt-content .info .contact ul li i {
+        font-size: 1.3em; }
+      .contacts .cnt-content .info .contact ul li a {
+        font-size: .8em; }
+      .contacts .cnt-content .info .contact ul li:last-child {
+        margin-bottom: 0; }
+  .contacts .cnt-content .form {
+    align-self: auto;
+    max-width: 100%;
+    flex: auto;
+    padding: 0;
+    margin-top: 10px; }
+    .contacts .cnt-content .form h2 {
+      font-size: .9em;
+      margin: 0;
+      margin-bottom: 10px;
+      text-align: center;
+      width: 100%; }
+    .contacts .cnt-content .form input {
+      box-sizing: border-box;
+      margin-bottom: 5px;
+      width: 100%; }
+    .contacts .cnt-content .form textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 6px;
+      height: 70px; }
+    .contacts .cnt-content .form .btn-send {
+      align-self: center;
+      padding: 5px 10px; } }

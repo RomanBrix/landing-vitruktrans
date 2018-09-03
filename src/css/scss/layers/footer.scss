@@ -1,0 +1,220 @@
+.footer{
+  background: #151933;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 30;
+  color: white;
+  padding: 50px 0 ;
+  overflow: hidden;
+  .logo{
+    border: 2px solid white;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 15px;
+    //ma
+    padding: 2px 10px 2px;
+    //di
+    //text-decoration: underline;
+    font-size: 2em;
+    font-weight: 100;
+    font-family: 'Conv_Roboto-Light';
+    .logo-letter{
+      font-family: 'Conv_Roboto-Regular';
+      font-weight: 900;
+      //text-decoration: none;
+      margin-right: 5px;
+      font-size: 2em;
+      color: red;
+    }
+  }
+  .menu{
+    margin: 25px 0;
+    position: relative;
+    z-index: 3
+  ;
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li{
+        margin-right: 15px;
+        font-size: 1.2em;
+        position: relative;
+        cursor: pointer;
+        &:last-child{
+          margin-right: 0;
+        }
+
+        &:before{
+          position: absolute;
+          content: '';
+          width: 0%;
+          transition: .25s;
+          height: 1px;
+          background: #90929e;
+          bottom: -2px;
+          left: 0;
+        }
+
+        &:hover{
+
+          &:before{
+            width: 100%;
+          }
+        }
+
+      }
+    }
+  }
+  .copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    .copyR{
+      font-family: Conv_Roboto-Light;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      &:before, &:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        top: calc(50% - (1px / 2));
+        background: #90929e;
+        //left: -10%;
+      }
+      &:after{
+        left: -60%;
+
+      }
+      &:before{
+        //background: transparent;
+        right: -60%;
+
+      }
+    }
+    .to-top{
+      position: absolute;
+      transform: rotate(-90deg);
+      right: 25%;
+      top: calc(50% - (35px / 2));
+      //border;
+      background: #3585fd;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: .45s;
+      i{
+        &:before{
+          transition: .45s;
+        }
+      }
+
+      &:hover{
+        transform:  scale(1.4);
+        i{
+          &:before{
+            transform: rotate(270deg);
+          }
+        }
+        //-webkit-transform: rotate(355deg) scale(2);
+        //-moz-transform: rotate(355deg) scale(2);
+        //-o-transform: rotate(355deg) scale(2);
+        //transform: rotate(355deg) scale(2);
+        //transform: ;
+      }
+    }
+  }
+  .more-text{
+    margin: 25px 0;
+    width: 40%;
+    color: #90929e;
+    text-align: center;
+  }
+  .socials{
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li{
+        margin-right: 15px;
+        font-size: 1.4em;
+        cursor: pointer;
+
+        i{
+          font-size: 1.1em;
+          position: relative;
+          transition: .25s;
+          //z-index: 10;
+
+
+          &:before{
+            position: relative;
+            margin: 0;
+            z-index: 10;
+          }
+          &:after{
+            z-index: 1;
+            position: absolute;
+            content: '';
+            width: 0px;
+            //transition: 0.35s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+            transition: .25s;
+
+            height: 0px;
+            background: white;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            //bottom: auto;
+          }
+        }
+
+        &:hover{
+
+          i{
+            color:rgba(107, 114, 147, 1.000) ;
+            &:after{
+              width: 35px;
+              height: 35px;
+              left: calc(50% - 17px);
+              top: calc(50% - 17px);
+            }
+          }
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .white-space{
+    position: absolute;
+    bottom: -55vh;
+    left: -45vh;
+    width: 100vh;
+    height: 100vh;
+    border-radius: 50%;
+    background: rgba(254, 255, 255, .06);
+    //z-index: 36;
+  }
+}
+
+@import "mob-footer.scss";

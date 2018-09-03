@@ -1,0 +1,21 @@
+@media (max-width: 481px) {
+  .footer {
+    padding: 25px 0; }
+    .footer .menu {
+      font-size: .8em;
+      margin: 50px 0; }
+      .footer .menu ul {
+        flex-wrap: wrap; }
+        .footer .menu ul li {
+          font-size: 1em;
+          margin-bottom: 15px; }
+          .footer .menu ul li:last-child {
+            margin-bottom: 15px; }
+    .footer .copyright .copyR:after {
+      left: -73%; }
+    .footer .copyright .copyR:before {
+      right: -73%; }
+    .footer .copyright .to-top {
+      right: 10%; }
+    .footer .more-text {
+      width: 75%; } }

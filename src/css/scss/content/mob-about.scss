@@ -1,0 +1,22 @@
+@media  (max-width:481px) {
+  .about{
+    .content{
+      padding: 25px 20px;
+      flex-direction: column;
+      .left-space{
+        width: 100%;
+        img{}
+      }
+      .right-space{
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        h3{
+          &:before{}
+        }
+        h2{}
+        p{}
+      }
+    }
+  }
+}
